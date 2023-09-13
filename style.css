@@ -1123,7 +1123,7 @@ section .title::before {
 
     .about-image img {
         margin: auto;
-        width: 350px;
+        width: 100%;
 
     }
 
@@ -1165,6 +1165,44 @@ section .title::before {
 
 
 
+
+@media screen and (max-width:670px) {
+    .Comm-blcok {
+        width: 100%;
+        margin: auto;
+    }
+
+    .about__block2 {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width:340px) {
+    
+
+    .Comm-blcok {
+        word-break: break-all;
+    }
+    
+    
+
+    .about-text h1 {
+        word-break: break-word;
+    }
+
+    .about-text p {
+
+        word-break: break-word;
+    }
+
+    .about__content {
+        word-break:break-word;
+    }
+
+    .about__block2 {
+        word-break: break-word;
+    }
+}
 
 
 
