@@ -111,3 +111,33 @@ clock();
 //     );
 // });
 
+
+
+
+document.getElementById('submitBtn').addEventListener('click', function() {
+    var name = document.getElementById('name').value;
+    var username = document.getElementById('phone').value;
+    var desk = document.getElementById('description').value;
+  
+    fetch('https://6503ef75c8869921ae2448a8.mockapi.io/order', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: name,
+        username: username,
+        desk: desk,
+      }),
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      location.reload();
+      window.scrollTo(0,0);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+  });
+  
